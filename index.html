@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRGen Pro - Pembuat Kode QR Modern & Canggih</title>
+    <meta name="description" content="Buat kode QR kustom secara gratis dengan logo, warna, dan berbagai format data dengan cepat dan mudah.">
+    
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary: #ef4444;
+            --primary-hover: #dc2626;
+            --bg-main: #fef2f2;
+            --surface: #ffffff;
+            --text-main: #1e293b;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-[var(--bg-main)] text-[var(--text-main)] font-sans antialiased;
+        }
+    }
+
+    @layer components {
+        .btn {
+            @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2;
+        }
+        .btn-primary {
+            @apply bg-[var(--primary)] text-white hover:bg-[var(--primary-hover)] shadow-sm;
+        }
+        .btn-outline {
+            @apply border border-gray-200 text-gray-700 hover:bg-gray-50;
+        }
+        .card {
+            @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-6;
+        }
+        .input-field {
+            @apply w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <!-- QR Code Library - Switched to a more stable CDN to resolve persistent loading issues -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+    
+    <script type="text/babel" src="utils/qr-utils.js"></script>
+    <script type="text/babel" src="components/Layout.js"></script>
+    <script type="text/babel" src="components/QRDisplay.js"></script>
+    <script type="text/babel" src="components/QRControls.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
