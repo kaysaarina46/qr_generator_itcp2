@@ -13,12 +13,10 @@ function Layout({ children }) {
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="#" className="text-gray-600 hover:text-red-600 font-medium">Beranda</a>
-            <a href="#" className="text-gray-600 hover:text-red-600 font-medium">Fitur</a>
-            <a href="#" className="text-gray-600 hover:text-red-600 font-medium">Bantuan</a>
           </nav>
           <div className="flex items-center gap-3">
-            <button className="btn btn-outline text-sm">Masuk</button>
-            <button className="btn btn-primary text-sm">Daftar Gratis</button>
+            <button className="btn btn-outline text-sm hidden">Masuk</button>
+            <button className="btn btn-primary text-sm hidden">Daftar Gratis</button>
           </div>
         </div>
       </header>
@@ -30,7 +28,7 @@ function Layout({ children }) {
       <footer className="bg-white border-t border-gray-100 py-8">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-gray-500 text-sm">
-            © 2026 QRGen Pro. Dibuat dengan cinta untuk kemudahan berbagi.
+            2026 QRGen Pro. dibuat oleh Kaysa dengan penuh cinta untuk kemudahan berbagi.
           </p>
         </div>
       </footer>
